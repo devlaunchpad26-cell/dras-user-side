@@ -50,6 +50,8 @@
   box-shadow: none !important;
 }
 
+
+
 .perspective {
   perspective: 1000px;
 }
@@ -60,13 +62,12 @@
 
 .backface-hidden {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
-
-
 .scan-bar {
   position: absolute;
   width: 100%;

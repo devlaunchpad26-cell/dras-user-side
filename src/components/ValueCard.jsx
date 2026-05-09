@@ -1,8 +1,18 @@
-function ValueCard({ icon, title, description }) {
-  return (
-    <div className="group perspective">
+import React, { useState } from "react";
 
-      <div className="relative h-[260px] w-full transition-transform duration-700 transform-style preserve-3d group-hover:rotate-y-180">
+function ValueCard({ icon, title, description }) {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <div
+      className="perspective cursor-pointer"
+      onClick={() => setFlipped(!flipped)}
+    >
+      <div
+        className={`relative h-[260px] w-full transition-transform duration-700 transform-style preserve-3d ${
+          flipped ? "rotate-y-180" : ""
+        }`}
+      >
 
         {/* FRONT */}
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#145a86] text-white rounded-xl backface-hidden shadow-lg">
@@ -29,7 +39,6 @@ function ValueCard({ icon, title, description }) {
         </div>
 
       </div>
-
     </div>
   );
 }
