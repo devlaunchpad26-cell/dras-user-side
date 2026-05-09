@@ -155,7 +155,7 @@ export default function Footer({ data,navbar }) {
     <span className="hidden md:block">|</span>
 
     <a
-      href="https://honeydew-dolphin-604211.hostingersite.com"
+      href="https://cms.bharatyuga.com"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-300 hover:text-white transition underline"
