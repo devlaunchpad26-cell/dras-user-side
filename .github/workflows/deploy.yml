@@ -6,17 +6,18 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
 
       - name: Install Dependencies
         run: npm install
@@ -24,12 +25,17 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Verify Build Output
+        run: ls -la dist
+
       - name: Deploy to Hostinger
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          REMOTE_PORT: ${{ secrets.PORT }}
-          SOURCE: "dist/"
-          TARGET: "public_html/"
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
+          source: "dist/*"
+          target: "/home/u274436198/domains/bharatyuga.com/public_html/"
+          strip_components: 1
+          overwrite: true
