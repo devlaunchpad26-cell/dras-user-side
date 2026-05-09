@@ -119,20 +119,51 @@ export default function Footer({ data,navbar }) {
 
       </div>
 
-      {/* 🔹 BOTTOM BAR */}
-   <div className="border-t border-gray-700 py-6 text-center text-sm text-gray-400 footer-item">
+  {/* 🔹 BOTTOM BAR */}
+<div className="border-t border-gray-700 py-6 text-center text-sm text-gray-400 footer-item px-4">
 
-  
-  <span className="text-white">{"DRAS"}</span> | Designed By{" "}
+  <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
 
-  <a
-    href="https://www.blueclan.tech/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-cyan-400 hover:text-cyan-300 transition"
-  >
-    Blueclan Technologies
-  </a>
+    <span>
+      © {new Date().getFullYear()}{" "}
+      <span className="text-white font-medium">DRAS</span>
+    </span>
+
+    <span className="hidden md:block">|</span>
+
+    <span>
+      Developed By{" "}
+      <a
+        href="https://www.blueclan.tech/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 transition"
+      >
+        Blueclan Technologies
+      </a>{" "}
+      &{" "}
+      <a
+        href="https://devlaunchpad.co.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 transition"
+      >
+        DevLaunchPad LLP
+      </a>
+    </span>
+
+    <span className="hidden md:block">|</span>
+
+    <a
+      href="https://honeydew-dolphin-604211.hostingersite.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-300 hover:text-white transition underline"
+    >
+      CMS
+    </a>
+
+  </div>
 
 </div>
 
