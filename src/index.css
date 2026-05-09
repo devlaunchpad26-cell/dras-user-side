@@ -50,8 +50,6 @@
   box-shadow: none !important;
 }
 
-
-
 .perspective {
   perspective: 1000px;
 }
@@ -68,6 +66,8 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+
 .scan-bar {
   position: absolute;
   width: 100%;

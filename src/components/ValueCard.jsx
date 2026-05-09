@@ -5,13 +5,13 @@ function ValueCard({ icon, title, description }) {
 
   return (
     <div
-      className="perspective cursor-pointer"
+      className="group perspective cursor-pointer"
       onClick={() => setFlipped(!flipped)}
     >
       <div
-        className={`relative h-[260px] w-full transition-transform duration-700 transform-style preserve-3d ${
-          flipped ? "rotate-y-180" : ""
-        }`}
+        className={`relative h-[260px] w-full transition-transform duration-700 transform-style preserve-3d
+        group-hover:rotate-y-180
+        ${flipped ? "rotate-y-180" : ""}`}
       >
 
         {/* FRONT */}
