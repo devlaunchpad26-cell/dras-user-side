@@ -46,12 +46,10 @@ export default function ProjectOverview() {
   return (
     <div className="bg-white">
 
-      {/* 🔹 HERO */}
+      {/* HERO */}
       <PageHero
         title="Project Overview"
-        backgroundImage={
-          getImageUrl(card.image) || "/dras-logo.jpeg" // ✅ fallback added
-        }
+        backgroundImage={getImageUrl(card.image)}
       />
 
       <div className="max-w-6xl mx-auto px-6 py-10">
@@ -68,31 +66,34 @@ export default function ProjectOverview() {
           {card.title}
         </div>
 
-        {/* 1️⃣ CLIENT REQUIREMENT */}
+        {/* CLIENT REQUIREMENT */}
         <div className="border-b py-6">
-          <h3 className="text-lg font-semibold mb-2"> {/* ✅ increased */}
+          <h3 className="text-lg font-semibold mb-2">
             1. Client Requirement
           </h3>
-          <p className="text-black text-base"> {/* ✅ increased */}
+
+          <p className="text-black text-base">
             {card?.overview?.requirement || "No data available"}
           </p>
         </div>
 
-        {/* 2️⃣ SITE PHOTOS + VIDEOS */}
+        {/* SITE PHOTOS */}
         <div className="border-b py-6">
           <h3 className="text-lg font-semibold mb-4">
             2. Site Photos
           </h3>
 
-          {/* IMAGES */}
           {images.length > 0 ? (
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               {images.map((img, index) => (
                 <img
                   key={index}
-                  src={getImageUrl(img) || "./dras-logo.jpeg"} // ✅ fallback added
+                  src={getImageUrl(img)}
                   alt={`Site ${index}`}
                   className="w-full h-48 object-cover rounded-lg"
+                  onError={(e) => {
+                    e.target.src = "/dras-logo.jpeg";
+                  }}
                 />
               ))}
             </div>
@@ -119,12 +120,13 @@ export default function ProjectOverview() {
           )}
         </div>
 
-        {/* 3️⃣ FINAL COMPLETION */}
+        {/* FINAL COMPLETION */}
         <div className="py-6">
-          <h3 className="text-lg font-semibold mb-2"> {/* ✅ increased */}
+          <h3 className="text-lg font-semibold mb-2">
             3. Final Completion
           </h3>
-          <p className="text-black text-base"> {/* ✅ increased */}
+
+          <p className="text-black text-base">
             {card?.overview?.completion || "No data available"}
           </p>
         </div>

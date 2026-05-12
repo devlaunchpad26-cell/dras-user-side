@@ -1,39 +1,22 @@
-// src/utils/api.js
+export const BASE_URL = window.location.origin;
 
-// 🔥 SWITCH (change to true after admin panel ready)
-const USE_GITHUB = false;
-
-// 🔥 CHANGE THIS (your repo link)
-const GITHUB_BASE =
-  "https://raw.githubusercontent.com/shivdipsadar/drass-cleint-side/main";
-
-// Data file
-export const DATA_URL = USE_GITHUB
-  ? `${GITHUB_BASE}/data.json`
-  : "/data.json";
-
-// 🔥 IMAGE HELPER
 export const getImageUrl = (path) => {
   if (!path) return "";
 
   // already full URL
-  if (path.startsWith("http")) return path;
-
-  // GitHub mode
-  if (USE_GITHUB) {
-    return `${GITHUB_BASE}${path}`;
+  if (path.startsWith("http")) {
+    return path;
   }
 
-  // local mode
-  return path;
+  return `${BASE_URL}${path}`;
 };
 
-// ✅ ADD THIS FUNCTION (IMPORTANT)
+export const DATA_URL = `${BASE_URL}/data.json`;
+
 export const getData = async () => {
   try {
     const res = await fetch(DATA_URL);
-    const data = await res.json();
-    return data;
+    return await res.json();
   } catch (error) {
     console.error("Error fetching data:", error);
     return {};

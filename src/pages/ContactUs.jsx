@@ -5,6 +5,7 @@ import useData from "../hooks/useData";
 const ContactUs = () => {
   const { data, loading, error } = useData();
   const [submitted, setSubmitted] = useState(false);
+  
 
   const contactData = data?.contact;
 
