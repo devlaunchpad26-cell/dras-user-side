@@ -250,18 +250,15 @@
         "cards": [
           {
             "id": 1,
-            "image": "/images/clients/client-08.8b86e021.jpg",
-            "title": "RCC Machine Foundation Modification",
+            "image": "/images/1778742730426-800T machine foundation-Photo.jpeg",
+            "title": "RCC Foundation for 800T Machine",
             "overview": {
               "requirement": "Modify existing foundation under strict safety and limited space conditions within deadline.",
               "completion": "Executed successfully with proper planning and delivered within 15 days timeline.",
               "media": {
-                "images": [
-                  "/images/projects/site8.jpg",
-                  "/images/projects/site9.jpg"
-                ],
+                "images": [],
                 "videos": [
-                  "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  ""
                 ]
               }
             }
