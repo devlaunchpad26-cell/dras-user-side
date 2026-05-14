@@ -220,11 +220,11 @@
           },
           {
             "id": 1778764914088,
-            "image": "HR Room",
-            "title": "",
+            "image": "",
+            "title": "HR Room",
             "overview": {
-              "requirement": "",
-              "completion": "",
+              "requirement": "csfsdfsfs",
+              "completion": "qwewqqe",
               "media": {
                 "images": [],
                 "videos": []
@@ -233,11 +233,11 @@
           },
           {
             "id": 1778764922600,
-            "image": "F&A room",
-            "title": "",
+            "image": "",
+            "title": "F&A room",
             "overview": {
-              "requirement": "",
-              "completion": "",
+              "requirement": "csfsdfsfs",
+              "completion": "qwewqqe",
               "media": {
                 "images": [],
                 "videos": []
@@ -246,11 +246,11 @@
           },
           {
             "id": 1778764930424,
-            "image": "Canteen",
-            "title": "",
+            "image": "",
+            "title": "Canteen",
             "overview": {
-              "requirement": "",
-              "completion": "",
+              "requirement": "csfsdfsfs",
+              "completion": "qwewqqe",
               "media": {
                 "images": [],
                 "videos": []
@@ -259,11 +259,11 @@
           },
           {
             "id": 1778764940424,
-            "image": "Old Drain",
-            "title": "",
+            "image": "",
+            "title": "Old Drain",
             "overview": {
-              "requirement": "",
-              "completion": "",
+              "requirement": "csfsdfsfs",
+              "completion": "qwewqqe",
               "media": {
                 "images": [],
                 "videos": []
@@ -272,11 +272,11 @@
           },
           {
             "id": 1778764950424,
-            "image": "Vigilance Room",
-            "title": "",
+            "image": "",
+            "title": "Vigilance Room",
             "overview": {
-              "requirement": "",
-              "completion": "",
+              "requirement": "csfsdfsfs",
+              "completion": "qwewqqe",
               "media": {
                 "images": [],
                 "videos": []
@@ -321,7 +321,9 @@
               "requirement": "Modify existing foundation under strict safety and limited space conditions within deadline.",
               "completion": "Executed successfully with proper planning and delivered within 15 days timeline.",
               "media": {
-                "images": [],
+                "images": [
+                  "/images/1778765249049-800T machine foundation-Photo.jpeg"
+                ],
                 "videos": []
               }
             }
