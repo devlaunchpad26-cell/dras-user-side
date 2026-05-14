@@ -217,6 +217,71 @@
                 ]
               }
             }
+          },
+          {
+            "id": 1778764914088,
+            "image": "HR Room",
+            "title": "",
+            "overview": {
+              "requirement": "",
+              "completion": "",
+              "media": {
+                "images": [],
+                "videos": []
+              }
+            }
+          },
+          {
+            "id": 1778764922600,
+            "image": "F&A room",
+            "title": "",
+            "overview": {
+              "requirement": "",
+              "completion": "",
+              "media": {
+                "images": [],
+                "videos": []
+              }
+            }
+          },
+          {
+            "id": 1778764930424,
+            "image": "Canteen",
+            "title": "",
+            "overview": {
+              "requirement": "",
+              "completion": "",
+              "media": {
+                "images": [],
+                "videos": []
+              }
+            }
+          },
+          {
+            "id": 1778764940424,
+            "image": "Old Drain",
+            "title": "",
+            "overview": {
+              "requirement": "",
+              "completion": "",
+              "media": {
+                "images": [],
+                "videos": []
+              }
+            }
+          },
+          {
+            "id": 1778764950424,
+            "image": "Vigilance Room",
+            "title": "",
+            "overview": {
+              "requirement": "",
+              "completion": "",
+              "media": {
+                "images": [],
+                "videos": []
+              }
+            }
           }
         ]
       },
@@ -250,7 +315,7 @@
         "cards": [
           {
             "id": 1,
-            "image": "/images/1778742730426-800T machine foundation-Photo.jpeg",
+            "image": "/images/1778764973867-800T machine foundation-Photo.jpeg",
             "title": "RCC Foundation for 800T Machine",
             "overview": {
               "requirement": "Modify existing foundation under strict safety and limited space conditions within deadline.",
