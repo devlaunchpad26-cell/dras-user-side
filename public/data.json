@@ -144,32 +144,38 @@
     ]
   },
   "services": {
-    "visible": false,
+    "visible": true,
     "title": "OUR KEY SERVICES",
     "items": [
       {
         "id": 1,
-        "icon": "Home",
-        "title": "RESIDENTIAL BUILDING",
-        "description": "Our construction services for residential buildings focus on creating comfortable and functional homes, combining quality craftsmanship with a personalized design to meet the unique needs of homeowners."
+        "icon": "BASIC RESIDENTIAL PACKAGE",
+        "title": "₹ 1279/- Sq Ft",
+        "description": "Package includes \n1) Basic Architecture design (2D Floor plan & 3D Elevation Design) & Structural Design\n2) Civil Core & Shell \n3) Finishing works\n4) Electrical, Plumbing & Fixtures not in scope\n\nFor more details contact us"
       },
       {
         "id": 2,
-        "icon": "Building2",
-        "title": "COMMERCIAL BUILDING",
-        "description": "Our construction services for commercial buildings cater to businesses and organizations, delivering efficient and aesthetically pleasing spaces that promote productivity and leave a lasting impression on clients and customers"
+        "icon": "STANDARD RESIDENTIAL PACKAGE",
+        "title": "₹ 1659/- Sq Ft",
+        "description": "Package includes \n1) Basic Architecture design (2D Floor plan & 3D Elevation Design), Structural Design, Interior Design & MEP Design\n2) Civil Core & Shell  \n3) Finishing works\n4) Basic Electrical, Plumbing & Fixtures\n\nFor more details contact us"
       },
       {
         "id": 3,
-        "icon": "School",
-        "title": "INSTITUTIONAL BUILDING",
-        "description": "We specialize in construction services for institutional buildings such as schools, hospitals, and public facilities, providing safe and welldesigned environments that support the specific needs and activities of these institutions."
+        "icon": "PREMIUM RESIDENTIAL PACKAGE",
+        "title": "₹ 1879/- Sq Ft",
+        "description": "Package includes \n1) Detailed Architecture design (2D Floor plan & 3D Elevation Design & Internal Isometric Views), Structural Design, Interior Design & MEP Design\n2) Civil core & shell \n3) Finishing works\n4) Electrical, Plumbing & Fixtures\n\nFor more details contact us"
       },
       {
         "id": 4,
-        "icon": "Factory",
-        "title": "INDUSTRIAL BUILDING",
-        "description": "Our construction services for industrial buildings encompass the design and construction of structures that facilitate manufacturing, storage, and logistical operations, prioritizing functionality, durability, and compliance with industry regulations."
+        "icon": "LUXURY RESIDENTIAL PACKAGE",
+        "title": "₹ 2169/- Sq Ft",
+        "description": "Package includes \n1) Detailed Architecture design (2D Floor plan & 3D Elevation Design & Internal Isometric Views), Structural Design, Interior Design & MEP Design\n2) Civil core & shell \n3) Finishing works\n4) Electrical, Plumbing & Fixtures\n\nFor more details contact us"
+      },
+      {
+        "id": 1784277035524,
+        "icon": "TERRACE LANDSCAPING PACKAGE",
+        "title": "CUSTOM ",
+        "description": ""
       }
     ]
   },
