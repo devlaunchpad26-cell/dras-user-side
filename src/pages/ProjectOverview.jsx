@@ -56,13 +56,13 @@ export default function ProjectOverview() {
         <div className="max-w-6xl mx-auto px-6 py-10">
           {/* PROJECT NAME */}
           <div className="border-b py-4">
-            <span className="font-semibold">Project Name :</span>{" "}
+            <span className="font-semibold">Client Name :</span>{" "}
             {project.client}
           </div>
 
           {/* CLIENT NAME */}
           <div className="border-b py-4">
-            <span className="font-semibold">Client Name :</span>{" "}
+            <span className="font-semibold">Project Name :</span>{" "}
             {card.title}
           </div>
 
