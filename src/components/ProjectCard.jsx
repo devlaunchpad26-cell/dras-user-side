@@ -11,7 +11,7 @@ function ProjectCard({ image, title, projectId, cardId }) {
   return (
     <div
       onClick={() => navigate(`/project/${projectId}/${cardId}`)}
-      className="aspect-square bg-white overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer flex flex-col"
+      className="aspect-square bg-white max-h-[300px] overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer flex flex-col"
     >
     {/* IMAGE */}
 <div className="flex-1 bg-gray-200 flex items-center justify-center overflow-hidden p-2">

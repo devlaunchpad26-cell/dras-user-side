@@ -44,7 +44,7 @@ export default function ProjectsSlider({ data }) {
     slidesToScroll: 1,
     autoplay: projects.length > 1,
     autoplaySpeed: 4000,
-    adaptiveHeight: true, // ✅ Height adjusts based on current slide
+    adaptiveHeight: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
@@ -112,24 +112,24 @@ export default function ProjectsSlider({ data }) {
         <Slider {...settings}>
           {projects.map((project, index) => (
             <div key={project.id || index}>
-              <div className="grid items-center gap-10 md:grid-cols-3">
-                {/* Client Name */}
-                <div className="project-client flex items-center">
-                  <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-3xl">
+              <div className="flex flex-col items-center gap-12 md:flex-row md:items-center md:justify-around">
+                {/* Client */}
+                <div className="project-client flex pl-6 justify-center md:w-1/3">
+                  <h3 className="text-center text-2xl font-semibold leading-snug text-white md:text-left md:text-3xl">
                     {project.client}
                   </h3>
                 </div>
 
                 {/* Cards */}
-                <div className="md:col-span-2 flex items-center">
+                <div className="flex justify-center md:w-2/3">
                   <div
-                    className={`w-full grid gap-6 ${
+                    className={`grid gap-6 ${
                       project.cards.length === 1
-                        ? "grid-cols-1"
+                        ? "grid-cols-1 max-w-xs"
                         : project.cards.length === 2
-                        ? "grid-cols-1 sm:grid-cols-2"
+                        ? "grid-cols-1 sm:grid-cols-2 max-w-2xl"
                         : project.cards.length === 3
-                        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl"
                         : "grid-cols-1 sm:grid-cols-2"
                     }`}
                   >
