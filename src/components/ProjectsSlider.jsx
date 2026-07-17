@@ -10,20 +10,21 @@ import "slick-carousel/slick/slick-theme.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// 🔁 Arrows
+// 🔁 Previous Arrow
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-[-20px] top-1/2 -translate-y-1/2 bg-white text-black px-3 py-2 rounded shadow z-20 hover:scale-110 transition"
+    className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-20 rounded bg-white px-3 py-2 text-black shadow transition hover:scale-110"
   >
     ‹
   </button>
 );
 
+// 🔁 Next Arrow
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-[-20px] top-1/2 -translate-y-1/2 bg-white text-black px-3 py-2 rounded shadow z-20 hover:scale-110 transition"
+    className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 rounded bg-white px-3 py-2 text-black shadow transition hover:scale-110"
   >
     ›
   </button>
@@ -43,16 +44,15 @@ export default function ProjectsSlider({ data }) {
     slidesToScroll: 1,
     autoplay: projects.length > 1,
     autoplaySpeed: 4000,
+    adaptiveHeight: true, // ✅ Height adjusts based on current slide
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
 
-  // ✅ GSAP Animation
   useLayoutEffect(() => {
     if (!projects.length) return;
 
     const ctx = gsap.context(() => {
-      // TITLE
       gsap.from(".projects-heading", {
         y: 60,
         opacity: 0,
@@ -60,7 +60,6 @@ export default function ProjectsSlider({ data }) {
         ease: "power3.out",
       });
 
-      // CLIENT NAME
       gsap.from(".project-client", {
         x: -100,
         opacity: 0,
@@ -73,7 +72,6 @@ export default function ProjectsSlider({ data }) {
         },
       });
 
-      // CARDS
       gsap.from(".project-card", {
         y: 80,
         opacity: 0,
@@ -92,66 +90,65 @@ export default function ProjectsSlider({ data }) {
 
   if (!projects.length) {
     return (
-      <section className="py-20 text-center text-white bg-[#264f96]">
+      <section className="bg-[#264f96] py-20 text-center text-white">
         No Projects Available
       </section>
     );
   }
 
   return (
-    <section ref={sectionRef} className="bg-[#264f96] py-20 overflow-hidden">
-      <div className="w-[90vw] max-w-7xl mx-auto text-center relative">
+    <section ref={sectionRef} className="overflow-hidden bg-[#264f96] py-20">
+      <div className="relative mx-auto w-[90vw] max-w-7xl">
+        {/* Heading */}
+        <div className="mb-16 text-center">
+          <h2 className="projects-heading text-3xl font-bold text-white md:text-4xl">
+            {title}
+          </h2>
 
-        {/* TITLE */}
-        <h2 className="projects-heading text-3xl md:text-4xl font-bold text-white">
-          {title}
-        </h2>
+          <div className="mx-auto mt-4 h-[3px] w-40 bg-white"></div>
+        </div>
 
-        <div className="w-40 h-[3px] bg-white mx-auto mt-4 mb-16"></div>
-
-        {/* SLIDER */}
+        {/* Slider */}
         <Slider {...settings}>
           {projects.map((project, index) => (
             <div key={project.id || index}>
-
-              <div className="grid md:grid-cols-3 gap-10 items-center">
-
-                {/* CLIENT NAME */}
-                <div className="project-client text-white text-2xl md:text-3xl font-semibold text-left leading-snug">
-                  {project.client}
+              <div className="grid items-center gap-10 md:grid-cols-3">
+                {/* Client Name */}
+                <div className="project-client flex items-center">
+                  <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-3xl">
+                    {project.client}
+                  </h3>
                 </div>
 
-                {/* CARDS */}
-                <div
-                  className={`md:col-span-2 grid gap-6 
-                  ${
-                    project.cards.length === 1
-                      ? "grid-cols-1"
-                      : project.cards.length === 2
-                      ? "grid-cols-1 sm:grid-cols-2"
-                      : project.cards.length === 3
-                      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                      : "grid-cols-1 sm:grid-cols-2"
-                  }`}
-                >
-                  {project.cards.map((card, i) => (
-                    <div key={card.id || i} className="project-card">
-                      <ProjectCard
-                        image={card.image}
-                        title={card.title}
-                        projectId={project.id}   // ✅ added
-                        cardId={card.id}         // ✅ added
-                      />
-                    </div>
-                  ))}
+                {/* Cards */}
+                <div className="md:col-span-2 flex items-center">
+                  <div
+                    className={`w-full grid gap-6 ${
+                      project.cards.length === 1
+                        ? "grid-cols-1"
+                        : project.cards.length === 2
+                        ? "grid-cols-1 sm:grid-cols-2"
+                        : project.cards.length === 3
+                        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                        : "grid-cols-1 sm:grid-cols-2"
+                    }`}
+                  >
+                    {project.cards.map((card, i) => (
+                      <div key={card.id || i} className="project-card">
+                        <ProjectCard
+                          image={card.image}
+                          title={card.title}
+                          projectId={project.id}
+                          cardId={card.id}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-
               </div>
-
             </div>
           ))}
         </Slider>
-
       </div>
     </section>
   );

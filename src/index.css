@@ -95,7 +95,7 @@
 
 
 /* Make all slick slides equal height */
-
+/* 
 .slick-track {
   display: flex !important;
 }
@@ -108,6 +108,14 @@
 .slick-slide > div {
   width: 100%;
   display: flex;
+} */
+
+.slick-list {
+  transition: height 0.35s ease;
+}
+
+.slick-slide > div {
+  width: 100%;
 }
 .marquee-container {
   overflow: hidden;
